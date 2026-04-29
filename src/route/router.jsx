@@ -9,6 +9,7 @@ import Works from "../pages/works";
 
 
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, '')
+const routerOptions = basePath ? { basename: basePath } : undefined
 
 export const router = createBrowserRouter(
     [
@@ -43,5 +44,5 @@ export const router = createBrowserRouter(
             ]
         }
     ],
-    { basename: basePath }
+    routerOptions
 )
