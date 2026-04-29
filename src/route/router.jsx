@@ -8,6 +8,8 @@ import SingleProject from "../pages/single-project";
 import Works from "../pages/works";
 
 
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
 export const router = createBrowserRouter(
     [
         {
@@ -41,5 +43,5 @@ export const router = createBrowserRouter(
             ]
         }
     ],
-    { basename: import.meta.env.BASE_URL }
+    { basename: basePath }
 )
