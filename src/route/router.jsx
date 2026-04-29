@@ -8,35 +8,38 @@ import SingleProject from "../pages/single-project";
 import Works from "../pages/works";
 
 
-export const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <RootLayout />,
-        children: [
-            {
-                path: "/",
-                element: <Home />
-            },
-            {
-                path: "/contact",
-                element: <Contact />
-            },
-            {
-                path: "/about",
-                element: <About />
-            },
-            {
-                path: "/service",
-                element: <Service />
-            },
-            {
-                path: "/single-project",
-                element: <SingleProject />
-            },
-            {
-                path: "/works",
-                element: <Works />
-            },
-        ]
-    }
-])
+export const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <RootLayout />,
+            children: [
+                {
+                    path: "/",
+                    element: <Home />
+                },
+                {
+                    path: "/contact",
+                    element: <Contact />
+                },
+                {
+                    path: "/about",
+                    element: <About />
+                },
+                {
+                    path: "/service",
+                    element: <Service />
+                },
+                {
+                    path: "/single-project",
+                    element: <SingleProject />
+                },
+                {
+                    path: "/works",
+                    element: <Works />
+                },
+            ]
+        }
+    ],
+    { basename: import.meta.env.BASE_URL }
+)
